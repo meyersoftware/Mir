@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    @*<div class="row">
+        <div class="col-md-12 text-center top">
+            <input type="button" id="btnload" value="Load Teams" class="btn btn-default btn-lg" />
+        </div>
+    </div>*@
+    <div class="row">
+        <div class="col-md-4 text-center">
+            <h2>Team <label id="Team1Name"></label></h2>
+            <br />
+            <br />
+            <select id="Team1Select"></select>
+        </div>
+        <div class="col-md-4 text-center">
+            <h3>VS.</h3>
+        </div>
+        <div class="col-md-4 text-center">
+            <h2>Team <label id="Team2Name"></label></h2>
+            <br />
+            <br />
+            <select id="Team2Select"></select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <label id="Results"></label>
+            <br />
+            <br />
+            <input type="button" id="btnClick" value="Get Results" class="btn btn-default btn-lg" />
+            </div>
+        </div>
+ </div>
+
+@section scripts {
+<script type="text/javascript">
+    $(document).ready(
+        loadTeams()
+        );
+
+    function loadTeams() {
+        var data = [];
+        $.getJSON("/Home/GetListViaJson", null, function (data) {
+            data = $.map(data, function (item, a) {
+                return "<option value=" + item.Value + ">" + item.Text + "</option>";
+            });
+            $("#Team1Select").html(data.join(""));
+            $("#Team1Name").html($("#Team1Select option:selected").text());
+            loadInitialOpossingTeams();
+        });
+    };
+
+    function loadInitialOpossingTeams() {
+        var params = JSON.stringify("1112");
+        $.getJSON("/Home/GetOpposingListViaJson?team=" + params, null, function (data) {
+            data = $.map(data, function (item, a) {
+                return "<option value=" + item.Value + ">" + item.Text + "</option>";
+            });
+            $("#Team1Name").html($("#Team1Select option:selected").text());
+            $("#Team2Select").html(data.join(""));
+            $("#Team2Name").html($("#Team2Select option:selected").text());
+        });
+    };
+
+    $("#Team1Select").change(function loadOpposingTeams() {
+        var params = JSON.stringify($("#Team1Select option:selected").text());
+        $.getJSON("/Home/GetOpposingListViaJson?team=" + params, null, function (data) {
+            data = $.map(data, function (item, a) {
+                return "<option value=" + item.Value + ">" + item.Text + "</option>";
+            });
+            $("#Team1Name").html($("#Team1Select option:selected").text());
+            $("#Team2Select").html(data.join(""));
+            $("#Team2Name").html($("#Team2Select option:selected").text());
+        });
+    });
+
+    $("#Team2Select").change(function showOpposingTeam() {
+            $("#Team2Name").html($("#Team2Select option:selected").text());
+        });
+
+    $("#btnClick").click(function getPreds() {
+        var team1 = JSON.stringify($("#Team1Select option:selected").text());
+        var team2 = JSON.stringify($("#Team2Select option:selected").text());
+        $.getJSON("/Home/GetPredsViaJson?team1=" + team1 + "&team2=" + team2, null, function (data) {
+            alert(data);
+            });
+        });
+</script>
+}

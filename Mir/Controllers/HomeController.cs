@@ -94,11 +94,11 @@ namespace Mir.Controllers
             //}
             if (predslist[0] == "1.0")
             {
-                returnpreds[0] = GetTeamName(team1).Replace("\"", "") + "is the winner!";
+                returnpreds[0] = GetTeamName(team1.Replace("\"", "")) + " is the winner!";
             }
             else
             {
-                returnpreds[0] = GetTeamName(team2).Replace("\"", "") + "is the winner!";
+                returnpreds[0] = GetTeamName(team2.Replace("\"", "")) + " is the winner!";
             }
 
             return returnpreds.ToList();
@@ -126,8 +126,8 @@ namespace Mir.Controllers
         {
             string sFileContents = "";
 
-            //var url = "http://pwp.apphb.com//teams.csv";
-            var url = "http://localhost:60029//teams.csv";
+            var url = "http://pwp.apphb.com//teams.csv";
+            //var url = "http://localhost:60029//teams.csv";
 
             WebClient wc = new WebClient();
 

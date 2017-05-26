@@ -37,3 +37,42 @@ c:\users\anita\onedrive\documents\visual studio 2017\Projects\Mir\Mir\bin\Micros
 c:\users\anita\onedrive\documents\visual studio 2017\Projects\Mir\Mir\obj\Debug\Mir.csprojResolveAssemblyReference.cache
 c:\users\anita\onedrive\documents\visual studio 2017\Projects\Mir\Mir\obj\Debug\Mir.dll
 c:\users\anita\onedrive\documents\visual studio 2017\Projects\Mir\Mir\obj\Debug\Mir.pdb
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\ApplicationInsights.config
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Mir.dll.config
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Mir.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Mir.pdb
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Antlr3.Runtime.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Microsoft.AI.Web.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Microsoft.ApplicationInsights.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Newtonsoft.Json.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\System.Web.Helpers.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\System.Web.Mvc.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\System.Web.Optimization.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\System.Web.Razor.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\System.Web.WebPages.Deployment.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\System.Web.WebPages.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\System.Web.WebPages.Razor.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\WebGrease.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Antlr3.Runtime.pdb
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Microsoft.AI.Web.xml
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Microsoft.ApplicationInsights.xml
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\Newtonsoft.Json.xml
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\System.Web.Helpers.xml
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\System.Web.Mvc.xml
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\System.Web.Optimization.xml
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\System.Web.Razor.xml
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\System.Web.WebPages.xml
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\System.Web.WebPages.Deployment.xml
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\bin\System.Web.WebPages.Razor.xml
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\obj\Debug\Mir.csprojResolveAssemblyReference.cache
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\obj\Debug\Mir.dll
+C:\Users\anita\OneDrive\Documents\GitHub\Mir\Mir\obj\Debug\Mir.pdb

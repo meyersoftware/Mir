@@ -10,7 +10,7 @@
     </div>*@
     <div class="row">
         <div class="col-md-4 text-center">
-            <h2>Team <label id="Team1Name"></label></h2>
+            <h2><label id="Team1Image"></label><br /> <label id="Team1Name"></label></h2>
             <br />
             <br />
             <select id="Team1Select"></select>
@@ -19,7 +19,7 @@
             <h3>VS.</h3>
         </div>
         <div class="col-md-4 text-center">
-            <h2>Team <label id="Team2Name"></label></h2>
+            <h2><label id="Team2Image"></label><br /> <label id="Team2Name"></label></h2>
             <br />
             <br />
             <select id="Team2Select"></select>
@@ -48,6 +48,7 @@
                 return "<option value=" + item.Value + ">" + item.Text + "</option>";
             });
             $("#Team1Select").html(data.join(""));
+            $("#Team1Image").html("<img src='../../Images/" + $("#Team1Select option:selected").text() + ".gif' />");
             $("#Team1Name").html($("#Team1Select option:selected").text());
             loadInitialOpossingTeams();
         });
@@ -59,33 +60,41 @@
             data = $.map(data, function (item, a) {
                 return "<option value=" + item.Value + ">" + item.Text + "</option>";
             });
+            $("#Team1Image").html("<img src='../../Images/" + $("#Team1Select option:selected").text() + ".gif' />");
             $("#Team1Name").html($("#Team1Select option:selected").text());
             $("#Team2Select").html(data.join(""));
+            $("#Team2Image").html("<img src='../../Images/" + $("#Team2Select option:selected").text() + ".gif' />");
             $("#Team2Name").html($("#Team2Select option:selected").text());
+            $("#Results").html("");
         });
     };
 
     $("#Team1Select").change(function loadOpposingTeams() {
-        var params = JSON.stringify($("#Team1Select option:selected").text());
+        var params = JSON.stringify($("#Team1Select option:selected").val());
         $.getJSON("/Home/GetOpposingListViaJson?team=" + params, null, function (data) {
             data = $.map(data, function (item, a) {
                 return "<option value=" + item.Value + ">" + item.Text + "</option>";
             });
+            $("#Team1Image").html("<img src='../../Images/" + $("#Team1Select option:selected").text() + ".gif' />");
             $("#Team1Name").html($("#Team1Select option:selected").text());
             $("#Team2Select").html(data.join(""));
+            $("#Team2Image").html("<img src='../../Images/" + $("#Team2Select option:selected").text() + ".gif' />");
             $("#Team2Name").html($("#Team2Select option:selected").text());
+            $("#Results").html("");
         });
     });
 
     $("#Team2Select").change(function showOpposingTeam() {
-            $("#Team2Name").html($("#Team2Select option:selected").text());
-        });
+        $("#Team2Image").html("<img src='../../Images/" + $("#Team2Select option:selected").text() + ".gif' />");
+        $("#Team2Name").html($("#Team2Select option:selected").text());
+        $("#Results").html("");
+    });
 
     $("#btnClick").click(function getPreds() {
-        var team1 = JSON.stringify($("#Team1Select option:selected").text());
-        var team2 = JSON.stringify($("#Team2Select option:selected").text());
+        var team1 = JSON.stringify($("#Team1Select option:selected").val());
+        var team2 = JSON.stringify($("#Team2Select option:selected").val());
         $.getJSON("/Home/GetPredsViaJson?team1=" + team1 + "&team2=" + team2, null, function (data) {
-            alert(data);
+            $("#Results").html(data);
             });
         });
 </script>

@@ -126,7 +126,7 @@ namespace Mir.Controllers
         {
             string sFileContents = "";
 
-            var url = "http://pwp.apphb.com//teams.csv";
+            var url = "http://mir.apphb.com//teams.csv";
             //var url = "http://localhost:60029//teams.csv";
 
             WebClient wc = new WebClient();

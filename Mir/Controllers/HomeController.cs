@@ -95,10 +95,12 @@ namespace Mir.Controllers
             if (predslist[0] == "1.0")
             {
                 returnpreds[0] = GetTeamName(team1.Replace("\"", "")) + " is the winner!";
+                returnpreds[1] = "<br /> Probability of: " + predslist[2].ToString();
             }
             else
             {
                 returnpreds[0] = GetTeamName(team2.Replace("\"", "")) + " is the winner!";
+                returnpreds[1] = "<br /> Probability of: " + predslist[1].ToString();
             }
 
             return returnpreds.ToList();
